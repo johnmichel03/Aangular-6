@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+
+ body{
+    background-color: #7599b3;
+} 
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  .margin-20{
+      margin-top: 20px;
+  }
+
+div.sm-jumbotron{
+    margin:0px;
+    padding: 2rem;
+    /* background-color: #38547b; */
+    background-color:  #ff9800 !important;
+    color: #fff;
+    padding: 1%;
+}
+
+button.btn-submit{
+    background-color: #ff9800;
+    color:#fff;
+    width: 100%;
+}
+
+button.btn-submit:focus,
+button.btn-submit:hover
+{
+    background-color: #ff9800;
+    /* background-color: #38547b;  */
+}
+
+input.ng-invalid.ng-dirty{
+    background-color: #e91e63!important;
+    box-shadow: 0 1px 0 0 #e91e63!important;
+}
+
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v38/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+  }
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+  
+
+  

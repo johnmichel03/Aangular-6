@@ -1,0 +1,58 @@
+<div class="row margin-20">
+  <div class="col s8 offset-s2">
+    <div class="card">
+      <div class="sm-jumbotron center-align">
+        <h3>{{title}}</h3>
+      </div>
+      <form class="col s12 white" (ngSubmit)="f.form.valid && save()" #f="ngForm" novalidate *ngIf="canShow">
+        <div class="row">
+          <div class="input-field col s6">
+            <input name="FirstName" type="text" class="validate" required [(ngModel)]="winner.FirstName">
+            <label for="FirstName">First Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input name="LastName" type="text" class="validate" required [(ngModel)]="winner.LastName">
+            <label for="LastName">Last Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="AddressLine" type="text" class="validate" required [(ngModel)]="winner.AddressLine">
+            <label for="AddressLine">Address</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input name="PostalCode" type="text" class="validate" required [(ngModel)]="winner.PostalCode">
+            <label for="PostalCode">Postal</label>
+          </div>
+
+          <div class="inline col s6">
+            <label for="CouponCode">Entered Coupon</label>
+            <input disabled name="CouponCode" type="text" [(ngModel)]="winnerCampaign.CouponCode">
+
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="input-field col s6 left-align">
+            <button [disabled]="!f.form.valid" class="btn-large btn-submit">Submit</button>
+          </div>
+          <div class="input-field col s6">
+            <a class="btn-large btn-default right-align" (click)="goBack()">
+              <i class="material-icons">arrow_back</i>
+            </a>
+          </div>
+        </div>
+      </form>
+      <div>
+        <h4 class="header center green-text margin-20">{{message}}</h4>
+        <div class="input-field col s6" *ngIf="!canShow">
+            <a class="btn-large btn-default right-align" (click)="goBack()">
+              <i class="material-icons">arrow_back</i>
+            </a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
